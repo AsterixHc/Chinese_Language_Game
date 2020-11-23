@@ -12,7 +12,7 @@ public class EnemyChasePlayer : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, maxSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.position, maxSpeed * Time.deltaTime );
         }
     }
 
