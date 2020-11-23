@@ -6201,8 +6201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a6f4ea4ca90a4d47887ea6e91c5816c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  movePoint: {fileID: 0}
+  moveSpeed: 0.1
+  movePoint: {fileID: 1257179027}
   whatStopsMovement:
     serializedVersion: 2
     m_Bits: 0
@@ -6427,7 +6427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199258dab4eda784d8eda291d179fbe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 0
+  maxSpeed: 5
   player: {fileID: 425665519}
 --- !u!58 &643680273
 CircleCollider2D:
@@ -6439,7 +6439,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6460,12 +6460,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &643680275
 SpriteRenderer:
   m_ObjectHideFlags: 0
