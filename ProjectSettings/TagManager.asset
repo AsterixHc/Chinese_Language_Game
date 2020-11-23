@@ -53,9 +53,9 @@ TagManager:
   - name: Walls
     uniqueID: 2737793435
     locked: 0
-  - name: Gates
-    uniqueID: 402444807
-    locked: 0
   - name: Decorative
     uniqueID: 3215189941
+    locked: 0
+  - name: Gates
+    uniqueID: 402444807
     locked: 0
