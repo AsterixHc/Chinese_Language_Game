@@ -59,7 +59,7 @@ public class VerbumBoxDetection : MonoBehaviour
         }
         else
         {
-            GameEvent.current.CallPlayerState(PlayerStateType.fjendenSkaderJeg);
+            GameEvent.current.CallPlayerState(PlayerStateType.fjendenSlårJeg);
         }
     }
 

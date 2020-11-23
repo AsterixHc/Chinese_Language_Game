@@ -4,8 +4,14 @@ using UnityEngine;
 
 public enum PlayerStateType
 {
-    fjendenSkaderJeg,
+    fjendenSlårJeg,
     fjendenHealerJeg,
-    jegSkaderFjenden,
-    jegHealerFjenden
+    jegSlårFjenden,
+    jegHealerFjenden,
+    døreSlårJeg,
+    jegSlårDøre,
+    ildSlårJeg,
+    jegSlårIld,
+    ildHealerFjender,
+    ildSlårFjender
 }

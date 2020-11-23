@@ -48,11 +48,15 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (SentenceBool.Referencebool == true && SentenceBool.SkaderFjender == true)
+        if (collision.gameObject.tag == "Enemy")
         {
-            if (collision.gameObject.tag == "Enemy")
+            if (playerState == PlayerStateType.fjendenSlårJeg)
             {
-                TakeDamage(collision.gameObject.Attack);
+                TakeDamage(collision.gameObject.GetComponent<EnemyChasePlayer>().Attack);
+            }
+            else if(playerState == PlayerStateType.jegSlårFjenden)
+            {
+                collision.gameObject.GetComponent<EnemyChasePlayer>().TakeDamage(attack);
             }
         }
     }

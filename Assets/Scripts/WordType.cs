@@ -5,8 +5,10 @@ using UnityEngine;
 public enum WordType 
 {
     none,
-    skader,
+    slår,
     healer,
     jeg,
-    fjender
+    fjender,
+    døre,
+    Ild
 }
