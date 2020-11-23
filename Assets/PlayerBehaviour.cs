@@ -5,6 +5,11 @@ using UnityEngine;
 public class PlayerBehaviour : MonoBehaviour
 {
     public PlayerStateType playerState;
+    [SerializeField]
+    private BoxSentenceMatchCombinations SentenceBool;
+
+    private int health = 100;
+    private int attack = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -17,19 +22,38 @@ public class PlayerBehaviour : MonoBehaviour
     {
         
     }
+
     private void SetMyPlayerState(PlayerStateType _playerState)
     {
         playerState = _playerState;
     }
+
+    private void TakeDamage(int EnemyDamage)
+    {
+        health -= EnemyDamage;
+        IsPlayerDead(health);
+    }
+
+    public bool IsPlayerDead(int health)
+    {
+        if(health == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //bool sentenceBoxCombination = FindObjectOfType<BoxSentenceMatchCombinations>().Referencebool;
-        //if(sentenceBoxCombination == true && FindObjectOfType<BoxSentenceMatchCombinations>().SkaderFjender == true)
-        //{
-        //    if(collision.gameObject.tag == "Enemy")
-        //    {
-
-        //    }
-        //}
+        if (SentenceBool.Referencebool == true && SentenceBool.SkaderFjender == true)
+        {
+            if (collision.gameObject.tag == "Enemy")
+            {
+                TakeDamage(collision.gameObject.Attack);
+            }
+        }
     }
 }
