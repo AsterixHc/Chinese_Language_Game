@@ -47,14 +47,17 @@ TagManager:
   - name: Floor
     uniqueID: 2252370935
     locked: 0
-  - name: Player
-    uniqueID: 1086363905
-    locked: 0
   - name: Walls
     uniqueID: 2737793435
     locked: 0
   - name: Decorative
     uniqueID: 3215189941
+    locked: 0
+  - name: Player
+    uniqueID: 1086363905
+    locked: 0
+  - name: Font
+    uniqueID: 887533065
     locked: 0
   - name: Gates
     uniqueID: 402444807
