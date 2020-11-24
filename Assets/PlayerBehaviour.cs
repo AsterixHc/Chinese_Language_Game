@@ -59,5 +59,16 @@ public class PlayerBehaviour : MonoBehaviour
                 collision.gameObject.GetComponent<EnemyChasePlayer>().TakeDamage(attack);
             }
         }
+        else if(collision.gameObject.tag == "Door")
+        {
+            if(playerState == PlayerStateType.jegSlårDøre)
+            {
+                collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            }
+            else if(playerState == PlayerStateType.døreSlårJeg)
+            {
+                TakeDamage(5);
+            }
+        }
     }
 }

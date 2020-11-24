@@ -13,6 +13,12 @@ public class EnemyChasePlayer : MonoBehaviour
     #endregion
     public float maxSpeed;
     public Transform player;
+    private GameObject gameObject;
+
+    private void Start()
+    {
+        gameObject = this.gameObject;
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -27,7 +33,7 @@ public class EnemyChasePlayer : MonoBehaviour
         health -= PlayerDamage;
         if (health <= 0)
         {
-            Destroy(this);
+            gameObject.SetActive(false);
         }
     }
 }
