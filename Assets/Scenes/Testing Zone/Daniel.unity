@@ -200,7 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 104051791}
   - component: {fileID: 104051792}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ExclamationIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10328,8 +10328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea0809204b9196f40a01327d99e198c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags:
-  - Pushable
+  tags: []
   distance: 1
   layerMask:
     serializedVersion: 2
@@ -16899,7 +16898,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585723312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1027717539}
@@ -16995,7 +16994,7 @@ GameObject:
   - component: {fileID: 1618066053}
   - component: {fileID: 1618066052}
   - component: {fileID: 1618066051}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DinoSprites
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -17070,12 +17069,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea0809204b9196f40a01327d99e198c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tags:
-  - PushAble
+  tags: []
   distance: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 3072
   rayHitGameObjectUp: {fileID: 0}
   rayHitGameObjectDown: {fileID: 0}
   rayHitGameObjectLeft: {fileID: 0}
@@ -17096,7 +17094,7 @@ MonoBehaviour:
   movePoint: {fileID: 2012775174}
   whatStopsMovement:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 3072
   whatMoveAble:
     serializedVersion: 2
     m_Bits: 2048
@@ -18081,7 +18079,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2012775174}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: movePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
