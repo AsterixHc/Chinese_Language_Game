@@ -7,6 +7,7 @@ TagManager:
   - PushAbleWords
   - Pushable
   - Enemy
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Box
   - Action
   - 
-  - 
+  - Collider
   - 
   - 
   - 
@@ -50,8 +51,14 @@ TagManager:
   - name: Walls
     uniqueID: 2737793435
     locked: 0
-  - name: Decorative
+  - name: DecorativeNonsolid
+    uniqueID: 3851944459
+    locked: 0
+  - name: DecorativeSolid
     uniqueID: 3215189941
+    locked: 0
+  - name: Gates
+    uniqueID: 1477071729
     locked: 0
   - name: Player
     uniqueID: 1086363905
@@ -59,6 +66,6 @@ TagManager:
   - name: Font
     uniqueID: 887533065
     locked: 0
-  - name: Gates
-    uniqueID: 402444807
+  - name: Collider
+    uniqueID: 4258837287
     locked: 0
