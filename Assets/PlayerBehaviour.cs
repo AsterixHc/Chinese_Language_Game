@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,9 +9,15 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField]
     private BoxSentenceMatchCombinations SentenceBool;
 
+    private RayDetection rayDetection;
+
     private int health = 100;
     private int attack = 10;
 
+    private void Awake()
+    {
+        rayDetection = GetComponent<RayDetection>();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +27,31 @@ public class PlayerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        RayCheck();
+    }
+
+    private void RayCheck()
+    {
+        GameObject LeftGameObject = rayDetection.RayHitGameObjectLeft;
+        GameObject RightGameObject = rayDetection.RayHitGameObjectRight;
+
+        if (LeftGameObject != null || RightGameObject != null)
+        {
+            if (LeftGameObject.tag == "Door")
+            {
+                if(LeftGameObject.GetComponent<DoorMechanic>().DoorUnlocked == true)
+                {
+                    LeftGameObject.GetComponent<DoorMechanic>().UnlockDoor();
+                }
+            }
+            else if(RightGameObject.tag == "Door")
+            {
+                if (RightGameObject.GetComponent<DoorMechanic>().DoorUnlocked == true)
+                {
+                    RightGameObject.GetComponent<DoorMechanic>().UnlockDoor();
+                }
+            }
+        }
     }
 
     private void SetMyPlayerState(PlayerStateType _playerState)
@@ -28,7 +59,7 @@ public class PlayerBehaviour : MonoBehaviour
         playerState = _playerState;
     }
 
-    private void TakeDamage(int EnemyDamage)
+    public void TakeDamage(int EnemyDamage)
     {
         health -= EnemyDamage;
         IsPlayerDead(health);
@@ -61,13 +92,9 @@ public class PlayerBehaviour : MonoBehaviour
         }
         else if(collision.gameObject.tag == "Door")
         {
-            if(playerState == PlayerStateType.jegSlårDøre)
+            if(playerState == PlayerStateType.døreSlårJeg)
             {
-                collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            }
-            else if(playerState == PlayerStateType.døreSlårJeg)
-            {
-                TakeDamage(5);
+                TakeDamage(collision.gameObject.GetComponent<DoorMechanic>().DoorDamage);
             }
         }
     }
