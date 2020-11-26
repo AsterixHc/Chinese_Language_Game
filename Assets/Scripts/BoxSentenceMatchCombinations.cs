@@ -47,11 +47,11 @@ public class BoxSentenceMatchCombinations : MonoBehaviour
         foreach (SentenceCombination item in _sentenceCombinations)
         {
             string tmp = "";
-            tmp += (item.firstWord == WordType.none ? "" : item.firstWord.ToString());
-            tmp += (item.secoundWord == WordType.none ? "" : item.secoundWord.ToString());
-            tmp += (item.thirdWord == WordType.none ? "" : item.thirdWord.ToString());
-            tmp += (item.fourthWord == WordType.none ? "" : item.fourthWord.ToString());
-            tmp += (item.fifthWord == WordType.none ? "" : item.fifthWord.ToString());
+            tmp += (item.firstWord == WordType.None ? "" : item.firstWord.ToString());
+            tmp += (item.secoundWord == WordType.None ? "" : item.secoundWord.ToString());
+            tmp += (item.thirdWord == WordType.None ? "" : item.thirdWord.ToString());
+            tmp += (item.fourthWord == WordType.None ? "" : item.fourthWord.ToString());
+            tmp += (item.fifthWord == WordType.None ? "" : item.fifthWord.ToString());
             SentenceCombinations.Add(tmp);
             SentenceCombinations02.Add(tmp,item.playerStateType);
         }

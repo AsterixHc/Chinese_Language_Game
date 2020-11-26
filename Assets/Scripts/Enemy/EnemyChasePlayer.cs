@@ -5,26 +5,20 @@ using UnityEngine;
 public class EnemyChasePlayer : MonoBehaviour
 {
     #region EnemyStats
-    private int attack = 5;
-    private int health = 20;
+    [SerializeField] private int attack = 5;
+    [SerializeField] private int health = 20;
 
     public int Attack { get => attack; set => attack = value; }
     public int Health { get => health; set => health = value; }
     #endregion
     public float maxSpeed;
     public Transform player;
-    private GameObject gameObject;
-
-    private void Start()
-    {
-        gameObject = this.gameObject;
-    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, maxSpeed * Time.deltaTime );
+            transform.position = Vector2.MoveTowards(transform.position, player.position, maxSpeed * Time.deltaTime);
         }
     }
 

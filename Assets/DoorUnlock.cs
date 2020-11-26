@@ -16,7 +16,7 @@ public class DoorUnlock : MonoBehaviour
     }
     private void Update()
     {
-        if(playerstate.playerState == PlayerStateType.jegSlårDøre && doorsUnlockedComplete == false)
+        if(playerstate.playerState == PlayerStateType.MeAttackDoor && doorsUnlockedComplete == false)
         {
             SentenceUnlockDoors();
         }

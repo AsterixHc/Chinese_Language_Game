@@ -23,7 +23,7 @@ public class VerbumBoxDetection : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        GameEvent.current.CallPlayerState(PlayerStateType.EnemeyAttackMe);
     }
 
     // Update is called once per frame
@@ -56,10 +56,6 @@ public class VerbumBoxDetection : MonoBehaviour
             {
                 box.Referencebool = false;
             }
-        }
-        else
-        {
-            GameEvent.current.CallPlayerState(PlayerStateType.fjendenSlårJeg);
         }
     }
 

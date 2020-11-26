@@ -4,11 +4,11 @@ using UnityEngine;
 
 public enum WordType 
 {
-    none,
-    slår,
-    healer,
-    jeg,
-    fjender,
-    døre,
-    Ild
+    None,
+    Attack,
+    Heal,
+    Me,
+    Enemey,
+    Door,
+    Fire
 }

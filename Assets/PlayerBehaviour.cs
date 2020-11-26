@@ -11,8 +11,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     private RayDetection rayDetection;
 
-    private int health = 100;
-    private int attack = 10;
+    [SerializeField] private int health = 100;
+    [SerializeField] private int attack = 10;
 
     private void Awake()
     {
@@ -35,7 +35,7 @@ public class PlayerBehaviour : MonoBehaviour
         GameObject LeftGameObject = rayDetection.RayHitGameObjectLeft;
         GameObject RightGameObject = rayDetection.RayHitGameObjectRight;
 
-        if (LeftGameObject != null || RightGameObject != null)
+        if (LeftGameObject != null)
         {
             if (LeftGameObject.tag == "Door")
             {
@@ -43,8 +43,11 @@ public class PlayerBehaviour : MonoBehaviour
                 {
                     LeftGameObject.GetComponent<DoorMechanic>().UnlockDoor();
                 }
-            }
-            else if(RightGameObject.tag == "Door")
+            }   
+        }
+        if(RightGameObject != null)
+        {
+            if (RightGameObject.tag == "Door")
             {
                 if (RightGameObject.GetComponent<DoorMechanic>().DoorUnlocked == true)
                 {
@@ -81,18 +84,27 @@ public class PlayerBehaviour : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            if (playerState == PlayerStateType.fjendenSlårJeg)
+            PlayerStateType typesafe = playerState;
+            if(playerState == PlayerStateType.DoorAttackMe || playerState == PlayerStateType.MeAttackDoor)
+            {
+                playerState = PlayerStateType.EnemeyAttackMe;
+            }
+
+            if (playerState == PlayerStateType.EnemeyAttackMe)
             {
                 TakeDamage(collision.gameObject.GetComponent<EnemyChasePlayer>().Attack);
             }
-            else if(playerState == PlayerStateType.jegSlårFjenden)
+
+            if (playerState == PlayerStateType.MeAttackEnemey)
             {
                 collision.gameObject.GetComponent<EnemyChasePlayer>().TakeDamage(attack);
             }
+            playerState = typesafe;
         }
-        else if(collision.gameObject.tag == "Door")
+        
+        if(collision.gameObject.tag == "Door")
         {
-            if(playerState == PlayerStateType.døreSlårJeg)
+            if(playerState == PlayerStateType.DoorAttackMe)
             {
                 TakeDamage(collision.gameObject.GetComponent<DoorMechanic>().DoorDamage);
             }
