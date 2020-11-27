@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class EnemyChasePlayer : MonoBehaviour
 {
+    #region EnemyStats
+    [SerializeField] private int attack = 5;
+    [SerializeField] private int health = 20;
 
+    public int Attack { get => attack; set => attack = value; }
+    public int Health { get => health; set => health = value; }
+    #endregion
     public float maxSpeed;
     public Transform player;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
@@ -16,4 +22,12 @@ public class EnemyChasePlayer : MonoBehaviour
         }
     }
 
+    public void TakeDamage(int PlayerDamage)
+    {
+        health -= PlayerDamage;
+        if (health <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+    }
 }
