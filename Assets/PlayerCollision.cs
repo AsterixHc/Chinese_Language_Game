@@ -2,11 +2,11 @@
 
 public class PlayerCollision : MonoBehaviour
 {
-    public PauseMenuScript pauseMenuScript;
+    public GameOverScript gameOverScript;
 
     void OnCollisionEnter(Collision collisionInfo)
     {
         //UnityEngine.Debug.Log(collisionInfo.collider.name);
-        pauseMenuScript.Pause();
+        gameOverScript.GameOver();
     }
 }
