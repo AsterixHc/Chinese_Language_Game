@@ -1189,7 +1189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverMenuUI: {fileID: 1866187818}
-  winMenuUI: {fileID: 0}
+  winMenuUI: {fileID: 1685541600}
 --- !u!1 &1011798106
 GameObject:
   m_ObjectHideFlags: 0
