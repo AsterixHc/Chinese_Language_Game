@@ -4,76 +4,76 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -1193820911090328509
-    second: DinoSprites - doux_0
+    second: Temp_Idle_0
   - first:
       213: -4782104476085066544
-    second: DinoSprites - doux_1
+    second: Temp_Idle_1
   - first:
       213: 5457486430018742753
-    second: DinoSprites - doux_2
+    second: Temp_Idle_2
   - first:
       213: -6998530912514391803
-    second: DinoSprites - doux_3
+    second: Temp_Idle_3
   - first:
       213: 3980471565588570874
-    second: DinoSprites - doux_4
+    second: Temp_Walk_0
   - first:
       213: -1273391385274323691
-    second: DinoSprites - doux_5
+    second: Temp_Walk_1
   - first:
       213: -4508140695509116639
-    second: DinoSprites - doux_6
+    second: Temp_Walk_2
   - first:
       213: 5167926156991472794
-    second: DinoSprites - doux_7
+    second: Temp_Walk_3
   - first:
       213: -5589726636969511265
-    second: DinoSprites - doux_8
+    second: Temp_Walk_4
   - first:
       213: 6843668749568235812
-    second: DinoSprites - doux_9
+    second: Temp_Walk_5
   - first:
       213: -779620069307929898
-    second: DinoSprites - doux_10
+    second: Temp_Attack_2
   - first:
       213: -4973719480991979858
-    second: DinoSprites - doux_11
+    second: Temp_Attack_2
   - first:
       213: -856149755822829703
-    second: DinoSprites - doux_12
+    second: Temp_Attack_2
   - first:
       213: 9005231359350743733
-    second: DinoSprites - doux_13
+    second: Temp_Hurt_0
   - first:
       213: -3062889640021937877
-    second: DinoSprites - doux_14
+    second: Temp_Hurt_1
   - first:
       213: 2344094080979329109
-    second: DinoSprites - doux_15
+    second: Temp_Hurt_2
   - first:
       213: 6187166469564620892
-    second: DinoSprites - doux_16
+    second: Temp_Hurt_3
   - first:
       213: 5790736894352482622
-    second: DinoSprites - doux_17
+    second: Temp_Crouch_0
   - first:
       213: 1017339619195510989
-    second: DinoSprites - doux_18
+    second: Temp_Crouch_1
   - first:
       213: 2435977642620248713
-    second: DinoSprites - doux_19
+    second: Temp_Crouch_2
   - first:
       213: -2169900482024534249
-    second: DinoSprites - doux_20
+    second: Temp_Crouch_3
   - first:
       213: 5122917098507624081
-    second: DinoSprites - doux_21
+    second: Temp_Crouch_4
   - first:
       213: 3715301444612607779
-    second: DinoSprites - doux_22
+    second: Temp_Crouch_5
   - first:
       213: -1725305482119995535
-    second: DinoSprites - doux_23
+    second: Temp_Crouch_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -159,13 +159,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DinoSprites - doux_0
+      name: Temp_Idle_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 3
-        width: 15
-        height: 17
+        x: 0
+        y: 0
+        width: 24
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_1
+      name: Temp_Idle_1
       rect:
         serializedVersion: 2
         x: 24
@@ -201,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_2
+      name: Temp_Idle_2
       rect:
         serializedVersion: 2
         x: 48
@@ -222,7 +222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_3
+      name: Temp_Idle_3
       rect:
         serializedVersion: 2
         x: 72
@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_4
+      name: Temp_Walk_0
       rect:
         serializedVersion: 2
         x: 96
@@ -264,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_5
+      name: Temp_Walk_1
       rect:
         serializedVersion: 2
         x: 120
@@ -285,7 +285,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_6
+      name: Temp_Walk_2
       rect:
         serializedVersion: 2
         x: 144
@@ -306,7 +306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_7
+      name: Temp_Walk_3
       rect:
         serializedVersion: 2
         x: 168
@@ -327,7 +327,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_8
+      name: Temp_Walk_4
       rect:
         serializedVersion: 2
         x: 192
@@ -348,7 +348,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_9
+      name: Temp_Walk_5
       rect:
         serializedVersion: 2
         x: 216
@@ -369,7 +369,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_10
+      name: Temp_Attack_0
       rect:
         serializedVersion: 2
         x: 240
@@ -390,7 +390,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_11
+      name: Temp_Attack_1
       rect:
         serializedVersion: 2
         x: 264
@@ -411,7 +411,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_12
+      name: Temp_Attack_2
       rect:
         serializedVersion: 2
         x: 288
@@ -432,7 +432,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_13
+      name: Temp_Hurt_0
       rect:
         serializedVersion: 2
         x: 312
@@ -453,7 +453,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_14
+      name: Temp_Hurt_1
       rect:
         serializedVersion: 2
         x: 336
@@ -474,7 +474,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_15
+      name: Temp_Hurt_2
       rect:
         serializedVersion: 2
         x: 360
@@ -495,7 +495,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_16
+      name: Temp_Hurt_3
       rect:
         serializedVersion: 2
         x: 384
@@ -516,7 +516,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_17
+      name: Temp_Crouch_0
       rect:
         serializedVersion: 2
         x: 408
@@ -537,7 +537,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_18
+      name: Temp_Crouch_1
       rect:
         serializedVersion: 2
         x: 432
@@ -558,7 +558,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_19
+      name: Temp_Crouch_2
       rect:
         serializedVersion: 2
         x: 456
@@ -579,7 +579,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_20
+      name: Temp_Crouch_3
       rect:
         serializedVersion: 2
         x: 480
@@ -600,7 +600,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_21
+      name: Temp_Crouch_4
       rect:
         serializedVersion: 2
         x: 504
@@ -621,7 +621,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_22
+      name: Temp_Crouch_5
       rect:
         serializedVersion: 2
         x: 528
@@ -642,7 +642,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DinoSprites - doux_23
+      name: Temp_Crouch_6
       rect:
         serializedVersion: 2
         x: 552
