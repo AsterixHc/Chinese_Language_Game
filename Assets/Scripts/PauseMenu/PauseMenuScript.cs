@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuScript : MonoBehaviour
 {
@@ -19,7 +20,11 @@ public class PauseMenuScript : MonoBehaviour
 			{
 				//Calls the resume part
 				Resume();
-			}else
+
+                //Calls the restart part
+                Restart();
+            }
+            else
 			{
 				//Calls the pause part
 				Pause();
@@ -29,6 +34,7 @@ public class PauseMenuScript : MonoBehaviour
 //=============================================================================
     public void Resume()
     {
+        Debug.Log("blyat");
     	//Pause Menu UI is deactivated
     	pauseMenuUI.SetActive(false);
     	//Normal game time
@@ -46,7 +52,13 @@ public class PauseMenuScript : MonoBehaviour
     	//Paused game time = game is paused
     	GameIsPaused = true;
     }
-//=============================================================================
+    //=============================================================================
+    public void Restart()
+    {
+        //Restarts Current Scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    //=============================================================================
     public void QuitGame()
     {
     	//Debug stuff
