@@ -194,6 +194,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Sl\xE5"
       objectReference: {fileID: 0}
+    - target: {fileID: 6428976031441129346, guid: 8b7d9ef1bdd02844198c69e2d5f2a0aa,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 19456
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b7d9ef1bdd02844198c69e2d5f2a0aa, type: 3}
 --- !u!1001 &71295667
@@ -268,6 +273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428976031441129346, guid: 8b7d9ef1bdd02844198c69e2d5f2a0aa,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 19456
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b7d9ef1bdd02844198c69e2d5f2a0aa, type: 3}
@@ -19451,6 +19461,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1248267450273796891, guid: d9d3a0cd06f62cc4aa4bdb0108ab2255,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 19456
+      objectReference: {fileID: 0}
     - target: {fileID: 6278332711162905188, guid: d9d3a0cd06f62cc4aa4bdb0108ab2255,
         type: 3}
       propertyPath: m_LocalPosition.x
