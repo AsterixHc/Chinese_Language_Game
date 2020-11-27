@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 3231594209560240607}
   - component: {fileID: 1341693510770064037}
   - component: {fileID: 6428976031441129346}
+  - component: {fileID: 1325350314635656416}
   m_Layer: 11
-  m_Name: Pushable Word 1
+  m_Name: Verbum Words
   m_TagString: Pushable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,3 +144,18 @@ MonoBehaviour:
   rayHitGameObjectDown: {fileID: 0}
   rayHitGameObjectLeft: {fileID: 0}
   rayHitGameObjectRight: {fileID: 0}
+--- !u!114 &1325350314635656416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3231089681637580870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff68368bee67a18458035c5a89fadea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoxType: Verbum
+  BoxWord: 0
+  sentenceCorrect: 0

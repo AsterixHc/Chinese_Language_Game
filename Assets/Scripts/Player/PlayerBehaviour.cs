@@ -32,6 +32,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         GameObject LeftGameObject = rayDetection.RayHitGameObjectLeft;
         GameObject RightGameObject = rayDetection.RayHitGameObjectRight;
+        GameObject UpGameObject = rayDetection.RayHitGameObjectUp;
 
         if (LeftGameObject != null)
         {
@@ -50,6 +51,16 @@ public class PlayerBehaviour : MonoBehaviour
                 if (RightGameObject.GetComponent<DoorMechanic>().DoorUnlocked == true)
                 {
                     RightGameObject.GetComponent<DoorMechanic>().UnlockDoor();
+                }
+            }
+        }
+        if (UpGameObject != null)
+        {
+            if (UpGameObject.tag == "Door")
+            {
+                if (UpGameObject.GetComponent<DoorMechanic>().DoorUnlocked == true)
+                {
+                    UpGameObject.GetComponent<DoorMechanic>().UnlockDoor();
                 }
             }
         }
