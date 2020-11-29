@@ -12,9 +12,12 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private int health = 100;
     [SerializeField] private int attack = 10;
 
+    public GameOverScript gameOver;
+
     private void Awake()
     {
         rayDetection = GetComponent<RayDetection>();
+        gameOver = FindObjectOfType<GameOverScript>();
     }
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,11 @@ public class PlayerBehaviour : MonoBehaviour
     void Update()
     {
         RayCheck();
+
+        if(IsPlayerDead() == true)
+        {
+            gameOver.GameOver();
+        }
     }
 
     private void RayCheck()
@@ -74,12 +82,12 @@ public class PlayerBehaviour : MonoBehaviour
     public void TakeDamage(int EnemyDamage)
     {
         health -= EnemyDamage;
-        IsPlayerDead(health);
+        IsPlayerDead();
     }
 
-    public bool IsPlayerDead(int health)
+    public bool IsPlayerDead()
     {
-        if(health == 0)
+        if(health <= 0)
         {
             return true;
         }
