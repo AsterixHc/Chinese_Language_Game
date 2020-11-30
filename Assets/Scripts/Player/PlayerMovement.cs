@@ -5,6 +5,8 @@ using DG.Tweening;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private AudioManager audioSource;
+
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Transform movePoint;
 
@@ -63,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
                     MoveBox(new Vector2(horizontalRaw, 0));
                     //DOtweening Code! Ask Kasper For help!
                     transform.DOLocalMove(movePoint.position, moveSpeed);
+                    audioSource.Play("BoxMovement");
                 }
 
             }
@@ -86,6 +89,8 @@ public class PlayerMovement : MonoBehaviour
                         MoveBox(new Vector2(0, verticalRaw));
                         //DOtweening Code! Ask Kasper For help!
                         transform.DOLocalMove(movePoint.position, moveSpeed);
+                        audioSource.Play("BoxMovement");
+
                     }
                 }
 

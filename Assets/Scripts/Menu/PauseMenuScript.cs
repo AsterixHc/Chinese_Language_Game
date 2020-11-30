@@ -34,7 +34,6 @@ public class PauseMenuScript : MonoBehaviour
 //=============================================================================
     public void Resume()
     {
-        Debug.Log("blyat");
     	//Pause Menu UI is deactivated
     	pauseMenuUI.SetActive(false);
     	//Normal game time

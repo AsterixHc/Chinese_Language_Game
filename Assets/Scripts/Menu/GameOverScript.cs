@@ -13,8 +13,18 @@ public class GameOverScript : MonoBehaviour
 
     public void RestartGame()
     {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gameOverMenuUI.SetActive(false);
+        winMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+        GameIsOver = false;
+    }
+
+    public void MainMenu()
+    {
         SceneManager.LoadScene("MainMenu");
         gameOverMenuUI.SetActive(false);
+        winMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsOver = false;
     }

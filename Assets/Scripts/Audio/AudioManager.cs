@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
-        Play("Theme");
+
     }
     public void Play(string name)
     {
@@ -43,6 +43,7 @@ public class AudioManager : MonoBehaviour
         if (s == null)
         {
             Debug.LogError("Sound: " + name + " not found");
+            return;
         }
         s.source.Play();
     }
