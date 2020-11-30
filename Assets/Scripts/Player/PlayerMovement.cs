@@ -24,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
     public float HorizontalRaw { get => horizontalRaw; set => horizontalRaw = value; }
     public float VerticalRaw { get => verticalRaw; set => verticalRaw = value; }
 
+    [SerializeField] private Animator animator;
+
+    private Vector2 movement;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Movement();
+        Animation();
     }
 
     private void Movement()
@@ -99,6 +103,16 @@ public class PlayerMovement : MonoBehaviour
 
 
         }
+    }
+
+    private void Animation()
+    {
+        movement.x = HorizontalRaw;
+        movement.y = VerticalRaw;
+
+        animator.SetFloat("Horizontal", HorizontalRaw);
+        animator.SetFloat("Vertical", VerticalRaw);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
     private void MoveBox(Vector2 _direction)
