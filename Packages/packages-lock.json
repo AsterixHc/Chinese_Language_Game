@@ -69,7 +69,7 @@
       "dependencies": {}
     },
     "com.unity.2d.tilemap.extras": {
-      "version": "file:C:/Users/Zecon/Downloads/2d-extras-master",
+      "version": "file:D:/Programmer/Visual Studio/Unity Projects/Backseat_Programming_Levels/2d-extras-master",
       "depth": 0,
       "source": "local",
       "dependencies": {
