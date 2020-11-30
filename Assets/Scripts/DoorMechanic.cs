@@ -9,7 +9,10 @@ public class DoorMechanic : MonoBehaviour
 
     public void UnlockDoor()
     {
-        //Destroy(this.gameObject);
-        gameObject.SetActive(false);
+        if(DoorUnlocked == true)
+        {
+            //Destroy(this.gameObject);
+            gameObject.SetActive(false);
+        }
     }
 }

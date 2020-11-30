@@ -12,6 +12,8 @@ public class VerbumBoxDetection : MonoBehaviour
     [SerializeField] private bool sentenceCorrect;
     string SentenceCombination;
 
+    public GameObject thirdGameObject;
+
     public bool SentenceCorrect { get => sentenceCorrect; set => sentenceCorrect = value; }
 
     private void Awake()
@@ -39,9 +41,35 @@ public class VerbumBoxDetection : MonoBehaviour
             GameObject LeftGameObject = rayDetection.RayHitGameObjectLeft;
             GameObject RightGameObject = rayDetection.RayHitGameObjectRight;
 
-            if (BoxTypeCheck(LeftGameObject, RightGameObject))
+            if (BoxTypeCheck(LeftGameObject) && BoxTypeCheck(RightGameObject))
             {
-                SentenceCombination = LeftGameObject.GetComponent<GeneralBoxDetection>().BoxWord.ToString() + BoxWord.ToString() + RightGameObject.GetComponent<GeneralBoxDetection>().BoxWord.ToString();
+                //SentenceCombination = LeftGameObject.GetComponent<GeneralBoxDetection>().BoxWord.ToString() + BoxWord.ToString() + RightGameObject.GetComponent<GeneralBoxDetection>().BoxWord.ToString();
+
+                if (LeftGameObject.GetComponent<GeneralBoxDetection>().BoxWord != WordType.None)
+                {
+                    SentenceCombination = LeftGameObject.GetComponent<GeneralBoxDetection>().BoxWord.ToString() + BoxWord.ToString();
+                }
+                else if(RightGameObject.GetComponent<GeneralBoxDetection>().BoxWord != WordType.None)
+                {
+                    SentenceCombination = BoxWord.ToString() + RightGameObject.GetComponent<GeneralBoxDetection>().BoxWord.ToString();
+                }
+
+                if (thirdGameObject != null)
+                {
+                    if(BoxTypeCheck(thirdGameObject))
+                    {
+                        if (LeftGameObject.GetComponent<GeneralBoxDetection>().TwoBlocks == true)
+                        {
+                            string tmp = SentenceCombination;
+                            SentenceCombination = thirdGameObject.GetComponent<GeneralBoxDetection>().BoxWord.ToString() + tmp;
+                        }
+                        else if(RightGameObject.GetComponent<GeneralBoxDetection>().TwoBlocks == true)
+                        {
+                            string tmp = SentenceCombination;
+                            SentenceCombination = tmp + thirdGameObject.GetComponent<GeneralBoxDetection>().BoxWord.ToString();
+                        }
+                    }
+                }
 
                 if (box.SentenceCombinations.Contains(SentenceCombination))
                 {
@@ -53,11 +81,15 @@ public class VerbumBoxDetection : MonoBehaviour
         }
     }
 
-    private bool BoxTypeCheck(GameObject gameObject1, GameObject gameObject2)
+    public void BoxTypeDetectionThirdBox(GameObject thirdBox)
     {
-        string BoxTypeGameObject1 = gameObject1.GetComponent<GeneralBoxDetection>().BoxType;
-        string BoxTypeGameObject2 = gameObject2.GetComponent<GeneralBoxDetection>().BoxType;
-        if (BoxType != BoxTypeGameObject1 && BoxType != BoxTypeGameObject2)
+        thirdGameObject = thirdBox;
+    }
+
+    private bool BoxTypeCheck(GameObject gameObject)
+    {
+        string BoxTypeGameObject = gameObject.GetComponent<GeneralBoxDetection>().BoxType;
+        if (BoxType != BoxTypeGameObject)
         {
             return true;
         }
