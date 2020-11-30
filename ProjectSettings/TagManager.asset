@@ -8,6 +8,8 @@ TagManager:
   - Pushable
   - Enemy
   - Door
+  - WinGame
+  - Crate
   layers:
   - Default
   - TransparentFX

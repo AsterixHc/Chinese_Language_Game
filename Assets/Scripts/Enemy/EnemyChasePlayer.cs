@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class EnemyChasePlayer : MonoBehaviour
 {
+    private float horizontalRaw;
+    private float verticalRaw;
+
+    public float HorizontalRaw { get => horizontalRaw; set => horizontalRaw = value; }
+    public float VerticalRaw { get => verticalRaw; set => verticalRaw = value; }
     #region EnemyStats
     [SerializeField] private int attack = 5;
     [SerializeField] private int health = 20;
@@ -13,6 +18,10 @@ public class EnemyChasePlayer : MonoBehaviour
     #endregion
     public float maxSpeed;
     public Transform player;
+
+    [SerializeField] private Animator animator;
+
+    private Vector2 movement;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -29,5 +38,21 @@ public class EnemyChasePlayer : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+    }
+    public void Update()
+    {
+        horizontalRaw = Input.GetAxisRaw("Horizontal");
+        verticalRaw = Input.GetAxisRaw("Vertical");
+        Animation();
+    }
+
+    private void Animation()
+    {
+        movement.x = HorizontalRaw;
+        movement.y = VerticalRaw;
+
+        animator.SetFloat("Horizontal", HorizontalRaw);
+        animator.SetFloat("Vertical", VerticalRaw);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 }

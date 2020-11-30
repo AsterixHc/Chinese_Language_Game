@@ -5,11 +5,9 @@ using UnityEngine;
 
 public class CrateRemoval : MonoBehaviour
 {
-    [SerializeField] private PlayerBehaviour playerState;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void Disable(PlayerStateType playerState)
     {
-        if(playerState.playerState == PlayerStateType.MeAttackEnemey)
+        if (playerState == PlayerStateType.MeAttackEnemey)
         {
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             gameObject.SetActive(false);

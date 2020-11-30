@@ -69,9 +69,8 @@ public class PlayerMovement : MonoBehaviour
                     MoveBox(new Vector2(horizontalRaw, 0));
                     //DOtweening Code! Ask Kasper For help!
                     transform.DOLocalMove(movePoint.position, moveSpeed);
-                    audioSource.Play("BoxMovement");
+                    //audioSource.Play("BoxMovement");
                 }
-
             }
             else
             {
@@ -93,15 +92,10 @@ public class PlayerMovement : MonoBehaviour
                         MoveBox(new Vector2(0, verticalRaw));
                         //DOtweening Code! Ask Kasper For help!
                         transform.DOLocalMove(movePoint.position, moveSpeed);
-                        audioSource.Play("BoxMovement");
-
+                        //audioSource.Play("BoxMovement");
                     }
                 }
-
-
             }
-
-
         }
     }
 
@@ -128,21 +122,17 @@ public class PlayerMovement : MonoBehaviour
             else if (_direction.x < 0 && rayDetection.RayHitLeft)
             {
                 objectToBeMoved = rayDetection.RayHitGameObjectLeft;
-
             }
-
         }
         else
         {
             if (_direction.y > 0 && rayDetection.RayHitUp)
             {
                 objectToBeMoved = rayDetection.RayHitGameObjectUp;
-
             }
             else if (_direction.y < 0 && rayDetection.RayHitDown)
             {
                 objectToBeMoved = rayDetection.RayHitGameObjectDown;
-
             }
         }
         
@@ -150,12 +140,10 @@ public class PlayerMovement : MonoBehaviour
         {
             objectToBeMoved.transform.DOLocalMove((Vector2)movePoint.position + _direction, moveSpeed);
         }
-
     }
 
     private bool DidIHitAnObject(Vector2 _direction)
     {
-
         if (_direction.x != 0)
         {
             if (_direction.x > 0 && rayDetection.RayHitRight)
@@ -165,21 +153,17 @@ public class PlayerMovement : MonoBehaviour
             else if (_direction.x < 0 && rayDetection.RayHitLeft)
             {
                 objectToBeMoved = rayDetection.RayHitGameObjectLeft;
-
             }
-
         }
         else
         {
             if (_direction.y > 0 && rayDetection.RayHitUp)
             {
                 objectToBeMoved = rayDetection.RayHitGameObjectUp;
-
             }
             else if (_direction.y < 0 && rayDetection.RayHitDown)
             {
                 objectToBeMoved = rayDetection.RayHitGameObjectDown;
-
             }
         }
         if (objectToBeMoved != null)

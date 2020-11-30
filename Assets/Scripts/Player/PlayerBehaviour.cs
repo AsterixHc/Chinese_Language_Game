@@ -30,7 +30,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         RayCheck();
 
-        if(IsPlayerDead() == true)
+        if(IsPlayerDead(health) == true)
         {
             gameOver.GameOver();
         }
@@ -82,12 +82,12 @@ public class PlayerBehaviour : MonoBehaviour
     public void TakeDamage(int EnemyDamage)
     {
         health -= EnemyDamage;
-        IsPlayerDead();
+        IsPlayerDead(health);
     }
 
-    public bool IsPlayerDead()
+    public bool IsPlayerDead(int Health)
     {
-        if(health <= 0)
+        if(Health <= 0)
         {
             return true;
         }
@@ -125,6 +125,16 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 TakeDamage(collision.gameObject.GetComponent<DoorMechanic>().DoorDamage);
             }
+        }
+
+        if(collision.gameObject.tag == "WinGame")
+        {
+            FindObjectOfType<GameOverScript>().Win();
+        }
+
+        if(collision.gameObject.tag == "Crate")
+        {
+            collision.gameObject.GetComponent<CrateRemoval>().Disable(playerState);
         }
     }
 }
